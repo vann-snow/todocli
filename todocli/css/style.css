@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    background-color: black;
+    color: #15FF00;
+    min-height: 100vh;
+    text-transform: uppercase;
+}
+
+.container {
+    padding: 2.5rem 2.5rem;
+}
+
+@media (min-width: 640px) {
+    .container {
+        padding: 5rem 5rem;
+    }
+}
+
+.progress-bar {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 1.1rem;
+}
+
+.progress-square {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: #15FF00;
+    box-shadow: 0 0 10px #15FF00, 0 0 40px #15FF00, 0 0 50px rgba(21, 255, 0, 0.2);
+    transition: opacity 0.3s ease;
+}
+
+.completion-text {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+input {
+    background-color: rgb(0, 0, 0);
+    border: none;
+    color: #15FF00;
+    font-family: monospace;
+    font-size: 1.3rem;
+    outline: none;
+    /*padding: 0.5rem;*/
+    text-transform: uppercase;
+}
+
+input::placeholder {
+    color: rgba(228, 236, 238, 0.815);
+    text-shadow: 0 0 5px rgba(225, 233, 223, 0.5);
+    
+}
+
+button {
+    background-color: black;
+    border: 1px solid #15FF00;
+    color: #15FF00;
+    font-family: monospace;
+    font-size: 1.125rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0 0 10px rgba(21, 255, 0, 0.2);
+}
+
+.task-item {
+    display: block;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+    font-size: 1.5rem;
+    text-shadow: rgb(21 255 0 / var(--tw-text-opacity));
+    letter-spacing: 1px;
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+    text-shadow: none;
+}
